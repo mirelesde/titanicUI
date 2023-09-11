@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Titanic</h1>
+        <form id="inputForm">
+            <label for="Entrada 1">Entrada  1:</label>
+            <input type="text" id="Entrada 1" name="Entrada 1" placeholder="Ingresa un valor"><br>
+
+            <label for="Entrada 2">Entrada  2:</label>
+            <input type="text" id="Entrada 2" name="Entrada 2" placeholder="Ingresa un valor"><br>
+
+            <label for="Entrada 3">Entrada  3:</label>
+            <input type="text" id="Entrada 3" name="Entrada 3" placeholder="Ingresa un valor"><br>
+
+            <label for="Entrada 4">Entrada  4:</label>
+            <input type="text" id="Entrada 4" name="Entrada 4" placeholder="Ingresa un valor"><br>
+
+            <button type="button" id="calculateButton">Calcular</button>
+        </form>
+
+        <div id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function() {
+            // Get the values from the input fields
+            const Entrada1 = parseFloat(document.getElementById("Entrada 1").value);
+            const Entrada2 = parseFloat(document.getElementById("Entrada 2").value);
+            const Entrada3 = parseFloat(document.getElementById("Entrada 3").value);
+            const Entrada4 = parseFloat(document.getElementById("Entrada 4").value);
+
+            // Perform server-side processing (replace this with actual server logic)
+            const result = Entrada1 + Entrada2 + Entrada3 + Entrada4;
+
+            // Display the response
+            document.getElementById("response").textContent = "Resultado: " + result;
+        });
+    </script>
+</body>
+</html>
